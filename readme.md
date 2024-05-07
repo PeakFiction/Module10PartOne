@@ -14,3 +14,6 @@ How it works is the executor.run() uses a while loop that iterates through its i
 
 #### Drop Spawner
 From what I see, the program isn't terminating once everything's done and dusted. The reason why is because there's still a thread holding the spawner that is keeping it. If the drop(spawner) isn't there, the thread will continue to run.
+
+I had to Control+C the terminal to stop it manually.
+<img width="286" alt="Screenshot 2024-05-07 at 12 32 29" src="https://github.com/PeakFiction/Module10PartOne/assets/112671939/30917231-9589-4b15-ac58-388df8a3cdbb">
