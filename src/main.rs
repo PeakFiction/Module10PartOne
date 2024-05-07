@@ -76,8 +76,21 @@ fn main() {
         println!("Duden's Computer: done");
     });
 
-    println!("Duden's Computer: hey there");
-    drop(spawner);
+    spawner.spawn(async {
+        println!("Duden's Computer: howdy! Two Times!");
+        TimerFuture::new(Duration::new(2,0)).await;
+        println!("Duden's Computer: done");
+    });
+
+    spawner.spawn(async {
+        println!("Duden's Computer: howdy! Three Times!");
+        TimerFuture::new(Duration::new(2,0)).await;
+        println!("Duden's Computer: done");
+    });
+
+
+    println!("hello there");
+    // drop(spawner);
 
     executor.run();
 }
